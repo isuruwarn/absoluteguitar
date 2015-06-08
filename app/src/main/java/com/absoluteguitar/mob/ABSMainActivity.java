@@ -72,6 +72,7 @@ public class ABSMainActivity extends ActionBarActivity {
 
 
     public void listen( View view ) {
+        Object obj = view.getTag();
         if( listening ) {
             stopListening();
         } else {
@@ -216,11 +217,11 @@ public class ABSMainActivity extends ActionBarActivity {
 
         public void run() {
 
-//            try {
-//                Thread.sleep(500);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
             int bufferSize = AudioRecord.getMinBufferSize(RATE, CHANNEL_MODE, ENCODING); //get the buffer size to use with this audio record
             AudioRecord recorder = new AudioRecord (MediaRecorder.AudioSource.MIC, RATE, CHANNEL_MODE, ENCODING, 6144 ); //instantiate the AudioRecorder

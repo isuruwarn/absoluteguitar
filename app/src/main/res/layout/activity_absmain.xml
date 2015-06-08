@@ -1,29 +1,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".ABSMainActivity">
+    android:layout_height="match_parent" android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp" tools:context=".ABSMainActivity">
 
     <ToggleButton
-        android:text="@string/button_start"
         android:layout_width="wrap_content"
         android:id="@+id/toggleButton1"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textOn="@string/toggle_on"
+        android:textOff="@string/toggle_off"
         android:onClick="listen">
     </ToggleButton>
 
     <TextView
-        android:layout_height="match_parent"
+        android:layout_height="50dp"
         android:layout_width="match_parent"
         android:id="@+id/display"
         android:text=""
         android:textColor="#BBBABE"
         android:textSize="40sp"
-        android:gravity="center_horizontal">
-        <!--android:textColor="#ff0000"-->
-        <!--android:background="#BBBABE"-->
+        android:layout_below="@+id/toggleButton1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
     </TextView>
 
     <ImageView
@@ -31,24 +32,33 @@
         android:id="@+id/frets"
         android:layout_height="wrap_content"
         android:src="@drawable/frets"
-        android:scrollbars="horizontal">
+        android:scrollbars="horizontal"
+        android:layout_below="@+id/toggleButton1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/frets_desc">
     </ImageView>
 
     <ScrollView
         android:id="@+id/ScrollView01"
         android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frets">
 
         <TextView
             android:text=""
             android:id="@+id/display3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:scrollbars="vertical"
             android:textSize="20sp"
             android:textColor="#BBBABE">
         </TextView>
 
     </ScrollView>
+
+
 
 </RelativeLayout>

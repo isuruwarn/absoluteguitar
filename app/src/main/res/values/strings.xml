@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Absolute Guitar</string>
     <string name="action_settings">Settings</string>
-    <string name="button_start">Start</string>
+    <string name="toggle_on">Stop</string>
+    <string name="toggle_off">Start</string>
+    <string name="frets_desc">display fret board</string>
 </resources>
